@@ -1,6 +1,5 @@
 from flask import Flask, jsonify, request
 from werkzeug.routing import BaseConverter, ValidationError
-from flask import url_for
 
 _USERS = {'1':'Tarek', '2':'Freya'}
 _IDS = {val: id for id, val in _USERS.items()}
@@ -41,6 +40,4 @@ def person(name):
 
 if __name__ == '__main__':
     print(app.url_map)
-    with app.test_request_context():
-        print(url_for('person', name='Tarek'))
     app.run()
