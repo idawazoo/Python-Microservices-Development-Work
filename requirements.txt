@@ -2,3 +2,4 @@ flask
 pyyaml
 blinker
 konfig
+Flask-WebTest
