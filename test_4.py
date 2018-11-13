@@ -1,6 +1,7 @@
 import unittest
 import os
 
+
 class TestMyApp(unittest.TestCase):
     def setUp(self):
         http_server = os.environ.get('HTTP_SERVER')
@@ -17,6 +18,7 @@ class TestMyApp(unittest.TestCase):
         hello = self.app.get('/api')
 
         self.assetEqual(hello.json['Hello'], 'World!')
+
 
 if __name__ == '__main__':
     unittest.main()

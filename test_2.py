@@ -4,6 +4,7 @@ from error_handle_2 import app as test_app
 
 _404 = ('philtest 404 error.')
 
+
 class TestApp(unittest.TestCase):
     def setUp(self):
         self.app = test_app.test_client()
@@ -24,10 +25,10 @@ class TestApp(unittest.TestCase):
 
         body = json.loads(str(hello.data, 'utf-8'))
 
-
         self.assertEqual(body['code'], 404)
         self.assertEqual(body['message'], '404: not Found')
         self.assertEqual(body['description'], _404)
+
 
 if __name__ == '__main__':
     unittest.main()

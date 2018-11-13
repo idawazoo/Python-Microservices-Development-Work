@@ -3,3 +3,6 @@ pyyaml
 blinker
 konfig
 Flask-WebTest
+flake8
+pytest-cov
+autopep8
